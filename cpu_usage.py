@@ -20,6 +20,9 @@ while True:
     elif cpu_usage_mean >= 60:  # Usage over 60%
         led_yellow.on()
         led_red.on()
+    elif cpu_usage_mean <= 30:  # Usage between 30% and 60%
+    led_yellow.off()
+    led_red.on()
     else:
         led_yellow.off()
         led_red.off()
